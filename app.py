@@ -13,7 +13,7 @@ def mask_pii(text):
 
     # Replace named entities with their labels
     for ent in doc.ents:
-        if ent.label_ in ["PERSON", "GPE", "ORG", "DATE", "MONEY", "LOC"]:  # Including more entity labels
+        if ent.label_ in ["PERSON", "ORG", "DATE", "MONEY", "LOC"]:  # Including more entity labels
             masked_text = masked_text.replace(ent.text, f'[{ent.label_}]')
 
     return masked_text
