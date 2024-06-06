@@ -6,7 +6,7 @@ class PostInstallCommand(install):
     """Post-installation for installation mode."""
     def run(self):
         install.run(self)
-        subprocess.check_call(['python', '-m', 'spacy', 'download', 'en_core_web_sm'])
+        subprocess.check_call(['python', 'post_install.py'])
 
 setup(
     name='your_project_name',
