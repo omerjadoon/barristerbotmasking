@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "postInstallCommand": "python post_install.py"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
